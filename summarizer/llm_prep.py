@@ -11,6 +11,7 @@ def analyze_professor_course_data(professor_data):
     unique_courses = sorted(list(taught_course_counts.keys()))
 
     course_details_summary = {}
+    all_reviews_combined = []  # --- CHANGED: track all reviews
 
     for course_code in unique_courses:
         current_course_stats = {
@@ -30,6 +31,7 @@ def analyze_professor_course_data(professor_data):
                 review_text = review.get("review", "").strip()
                 if review_text:
                     current_course_stats["merged_reviews"].append(review_text)
+                    all_reviews_combined.append(review_text)  # --- CHANGED: collect global reviews
 
         if current_course_stats["num_reviews"] > 0:
             current_course_stats["avg_rating"] = round(
@@ -43,7 +45,11 @@ def analyze_professor_course_data(professor_data):
             "merged_reviews": " ".join(current_course_stats["merged_reviews"])
         }
 
-    return course_details_summary
+    # --- CHANGED: Add all merged reviews globally
+    return {
+        "all_merged_reviews": " ".join(all_reviews_combined),
+        "courses": course_details_summary
+    }
 
 
 if __name__ == "__main__":
