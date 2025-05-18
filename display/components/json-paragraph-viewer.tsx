@@ -10,7 +10,7 @@ interface Database {
   [key: string]: ParagraphFile;
 }
 
-// CSS styles without Tailwind
+// CSS
 const styles: Record<string, React.CSSProperties> = {
   container: {
     maxWidth: '800px',
