@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Readable JSON Viewer - Dark Mode</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      padding: 20px;
+    }
+    input {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      border: 1px solid #444;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .data {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .pair {
+      margin: 5px 0;
+    }
+    .key {
+      font-weight: bold;
+      color: #90caf9;
+    }
+  </style>
+</head>
+<body>
+  <h2>Upload JSON File</h2>
+  <input type="file" id="fileInput" accept=".json">
+  <div id="output"></div>
+
+  <script>
+    const output = document.getElementById('output');
+
+    document.getElementById('fileInput').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        try {
+          const json = JSON.parse(event.target.result);
+          output.innerHTML = '';
+          const keysToDisplay = ['all_merged_reviews', 'courses', 'avg_rating', 'date_summarized']; // Customize here
+
+          if (Array.isArray(json)) {
+            json.forEach(item => output.appendChild(formatData(item, keysToDisplay)));
+          } else {
+            output.appendChild(formatData(json, keysToDisplay));
+          }
+        } catch {
+          output.textContent = 'Invalid JSON file.';
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    function formatData(data, keys) {
+      const container = document.createElement('div');
+      container.className = 'data';
+      keys.forEach(key => {
+        const div = document.createElement('div');
+        div.className = 'pair';
+        div.innerHTML = `<span class="key">${key}:</span> ${data[key] ?? 'N/A'}`;
+        container.appendChild(div);
+      });
+      return container;
+    }
+  </script>
+</body>
+</html>
