@@ -2,7 +2,7 @@ import json
 import requests
 from datetime import datetime
 from pathlib import Path
-import argparse # Added for CLI arguments
+import argparse
 
 # Prompt for summarizing the "all_merged_reviews" text
 
@@ -95,7 +95,7 @@ def process_json_and_summarize(input_filepath_str):
 
 def format_professor_name_for_filename(name_str):
     """Converts 'Firstname Lastname' to 'Firstname+Lastname'."""
-    return name_str.replace(" ", "+")
+    return name_str.replace("+", "_")
 
 def summarize_single_professor(professor_name_str):
     """
