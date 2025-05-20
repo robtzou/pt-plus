@@ -6,7 +6,7 @@ import argparse # Added for CLI arguments
 
 # Prompt for summarizing the "all_merged_reviews" text
 
-SUMMARIZE_TEXT_PROMPT = """In 200 hundred words, please focus on personality of the professor, then course structure, and finally any general critiques to watchout for.
+SUMMARIZE_TEXT_PROMPT = """In 100 hundred words, please focus on personality of the professor, then course structure, and finally any general critiques to watchout for.
 
 Student Feedback:
 {text_content}
