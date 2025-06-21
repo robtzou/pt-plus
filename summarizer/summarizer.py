@@ -6,7 +6,8 @@ import argparse
 
 # Prompt for summarizing the "all_merged_reviews" text
 
-SUMMARIZE_TEXT_PROMPT = """In 100 hundred words, please focus on personality of the professor, then course structure, and finally any general critiques to watchout for.
+SUMMARIZE_TEXT_PROMPT = """In 75 hundred words, summarize the text based on personality of the professor, then course structure, and critiques.
+Note: Include only information pertaining to the course.
 
 Student Feedback:
 {text_content}

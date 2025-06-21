@@ -1,5 +1,23 @@
 {
-  "all_merged_reviews": "Professor Scott Jackson (also referred to as Prof Jackson) teaches INST126 Introduction to Information Science programming course. Many of his students have provided feedback about him being a nice person, approachable, and willing to help. However, there are significant issues with the grading system, including not releasing grades until close to the end of the semester and assigning points rather than using a traditional rubric. Some students found it difficult to get timely feedback on their assignments, which made it hard to know how they were doing in class. Despite these issues, many students appreciated Prof Jackson's efforts to make coding fun and engaging, and some even enjoyed the flexibility of not having exams or attendance requirements.\n\nPersonality:\nScott Jackson is described as a nice person, approachable, and willing to help. Many students appreciate his efforts to make coding fun and engaging, despite some grumblings about the lack of engagement from lectures. Some have mentioned that he can be \"weird\" at times but this seems to be more of a personal quirk rather than a significant issue with his teaching style.\n\nCourse Structure:\nThe course structure has been described as flexible, with not having exams or attendance requirements, which many students appreciated. However, the grading system has been criticized for being slow and lacking in feedback, making it difficult for students to know how they are doing in class. Some have mentioned that assignments can be unclear at times, but Prof Jackson is willing to work with students and provide additional support.\n\nCritique:\nThe most significant critique of Prof Jackson's teaching is the grading system, which has been criticized for being slow and lacking in feedback. This can make it difficult for students to know how they are doing in class and can be stressful for those who are concerned about their grades. Additionally, some assignments may be unclear at times, but Prof Jackson is willing to work with students to provide additional support. Despite these issues, many students appreciate Prof Jackson's efforts to make coding fun and engaging, and some even enjoy the flexibility of not having exams or attendance requirements.\n\nRecommendations:\nIf you are considering taking Professor Jackson's course, it would be advisable to:\n\n* Be prepared for a slow grading system\n* Ask for feedback and support from Prof Jackson during office hours\n* Take advantage of additional resources, such as online tutorials and coding exercises\n* Be flexible with your schedule and assignments\n\nKeep in mind that the grading system may not provide immediate feedback on student progress, but it can be managed with good time management and a willingness to ask for help. By being proactive and seeking support from Prof Jackson, you can make the most of this course despite its unique challenges.\n\nOverall, Professor Scott Jackson's strengths as an instructor include his approachability, willingness to help, and efforts to make coding fun and engaging. However, the grading system and lack of immediate feedback on student progress may be significant challenges for some students. With good time management and a willingness to ask for help, it is possible to succeed in this course despite its unique structure and grading system.",
+  "name": "Scott Jackson",
+  "all_merged_reviews": "Professor Scott (or some students mention professor Jackson though one student mentioned inst126) seems to have a good personality with approachable office hours but his teaching style and grading system can be a challenge. Some students found the lectures boring, disorganized, or hard to understand and the lack of timely feedback made it difficult for them to know their progress in the class. However, others appreciated Scott's flexibility, willingness to help, and the ease of assignments. The grading system was unusual, using a \"point\" system with opportunities to improve previous scores but without clear timelines for receiving grades, leading to frustration among some students who struggled to keep track of their progress.\n\nNote on Structure:\n* Lectures were recorded, but did not seem to be very structured or engaging.\n* The course consisted of word count and consolidation projects, as well as coding assignments that built off each other.\n* Grading system was unusual, using a \"point\" system with opportunities to improve previous scores.\n* There were no exams in the class.\n* Office hours were available, but not required for attendance or participation.\n* No clear timeline for receiving grades during the semester.\n\nPersonality of Professor:\n* Approachable and willing to help\n* Flexible with deadlines\n* Passionate about teaching (but some students found lectures boring)\n* Nice and understanding (as reported by several students)\n\nCritiques:\n* Lectures were disorganized or not engaging\n* Lack of timely feedback on assignments made it difficult for students to track their progress\n* Grading system was unusual and unclear, leading to frustration among students\n* No clear timeline for receiving grades during the semester, making it difficult to plan for final grades\n* Some students reported that the professor did not attend classes on Mondays (one student's experience)\n* One student mentioned that grading happened late in the semester, which could have affected their ability to make changes or improve their work based on feedback.",
+  "teaches": [
+    {
+      "course_code": "INST126",
+      "times_taught": 3,
+      "avg_rating": 2.79
+    },
+    {
+      "course_code": "INST228",
+      "times_taught": 2,
+      "avg_rating": 0.0
+    },
+    {
+      "course_code": "INST462",
+      "times_taught": 2,
+      "avg_rating": 4.5
+    }
+  ],
   "courses": {
     "INST126": {
       "times_taught": 3,
@@ -32,5 +50,5 @@
       "merged_reviews": ""
     }
   },
-  "date_summarized": "20250518150728"
+  "date_summarized": "20250519230618"
 }
