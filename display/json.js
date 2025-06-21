@@ -1,43 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Readable JSON Viewer - Dark Mode</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
-      padding: 20px;
-    }
-    input {
-      background-color: #1e1e1e;
-      color: #e0e0e0;
-      border: 1px solid #444;
-      padding: 5px;
-      margin-bottom: 10px;
-    }
-    .data {
-      background-color: #1e1e1e;
-      border: 1px solid #333;
-      padding: 10px;
-      margin-top: 10px;
-    }
-    .pair {
-      margin: 5px 0;
-    }
-    .key {
-      font-weight: bold;
-      color: #90caf9;
-    }
-  </style>
-</head>
-<body>
-  <h2>Upload JSON File</h2>
-  <input type="file" id="fileInput" accept=".json">
-  <div id="output"></div>
-
-  <script>
     const output = document.getElementById('output');
 
     document.getElementById('fileInput').addEventListener('change', function(e) {
@@ -49,7 +9,7 @@
         try {
           const json = JSON.parse(event.target.result);
           output.innerHTML = '';
-          const keysToDisplay = ['all_merged_reviews', 'courses', 'avg_rating', 'date_summarized']; // Customize here
+          const keysToDisplay = ['name','all_merged_reviews', 'courses', 'teaches', 'date_summarized']; // Customize here
 
           if (Array.isArray(json)) {
             json.forEach(item => output.appendChild(formatData(item, keysToDisplay)));
@@ -74,6 +34,3 @@
       });
       return container;
     }
-  </script>
-</body>
-</html>
