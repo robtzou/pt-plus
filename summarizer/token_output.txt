@@ -1,0 +1,531 @@
+
+--- Chunk 2 ---
+ 
+Summer 2025 Course Syllabus  
+WB11 Section 
+ INST327 - 
+Database Design and Modeling 
+ 
+Course Description and Learning Outcomes 
+This course is a broad introduction to relational database 
+systems, combining both conceptual understanding and hands-
+on practice. Students will explore the relational model, which 
+forms the foundation for designing and querying databases. 
+Key topics include database design techniques such as user-
+focused design, requirements analysis, entity relationship 
+modeling, and normalization. 
+Through practical exercises, students will use Structured 
+Query Language (SQL) and a database management system 
+(DBMS) to build, populate, and query a functioning database. 
+Along the way, students will also use Excel for preparing data 
+and explore platforms such as Kaggle, Google Dataset Search, 
+and Data.gov to find and work with datasets. 
+ 
+By the end of this course, you will be able to: 
+• Explain the relational model as a logical framework for 
+organizing and retrieving data. 
+• Write database queries using SQL. 
+• Translate user needs into clear database requirements and 
+represent them using entity-relationship models.  
+• Design and build a working relational database using a 
+DBMS. 
+• Normalize and de-normalize a database to improve 
+performance. 
+• Recognize potential security issues in databases and develop 
+strategies to address them. 
+• Understand how the design and use of relational databases 
+connect to broader social and organizational structures, 
+including ethical and equity considerations. 
+ 
+ 
+      
+Instructional Team 
+Iskander Lou 
+Lecturer 
+ilou@umd.edu  
+(please use Canvas/Discord for 
+communication) 
+ 
+Nicolas Lizarralde 
+Graduate TA 
+ 
+Elizabeth Vandegrift 
+Undergraduate TA 
+ 
+Office Hours 
+The office hours schedule is available 
+in the course homepage. 
+ 
+Class Time 
+Mon & 
+Wed   
+1pm-3:15pm 
+EST 
+Location: 
+Zoom 
+ 
+Databases that we have built 
+before    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(Clues are provided in the last page  
+ of the syllabus.) 
+ 
+
+Page 2 of 8 
+ 
+Required Resources 
+ 
+Textbook 
+ 
+Murach’s MySQL, Third Edition (2019) 
+Murach, Joel. ISBN: 9781943872367 
+ 
+Physical copies are available at campus bookstore. 
+eBook: https://www.murach.com/shop/murach-s-mysql-3rd-edition-detail 
+Chapters 2 & 3 can be downloaded for free at the link above.  
+Additional readings and resources may be assigned via ELMS. 
+ 
+Software 
+ 
+MySQL Community Server (v8 or later)  install this first 
+o Mac: https://dev.mysql.com/downloads/mysql/ 
+o Windows: https://dev.mysql.com/downloads/installer/ 
+ 
+      MySQL Workbench (v8 or later)  install this after 
+o Mac: https://dev.mysql.com/downloads/workbench/ 
+o Windows: The community server installer includes Workbench as well. 
+ 
+Excel 
+o Mac: https://terpware.umd.edu/Mac/Title/3107 
+o Windows: https://terpware.umd.edu/Windows/Title/3107 
+ 
+ 
+Useful Links 
+ 
+Excalidraw (easy way to draw and share diagrams) 
+https://excalidraw.com/ 
+ 
+Kaggle (the most popular platform for datasets) 
+https://www.kaggle.com/ 
+ 
+Google Dataset Search (search engine for discovering datasets across the web) 
+https://datasetsearch.research.google.com/ 
+ 
+Data.gov (public datasets provided by the U.S. government) 
+https://data.gov/ 
+ 
+We will work through SQL examples during synchronous class meetings. Please have the required software 
+installed before or during the first class. Check ELMS for download and installation instructions, videos, and 
+other resources. Feel free to contact the instructional team if you need assistance with software installation. 
+ 
+
+Page 3 of 8 
+ 
+Campus Policies
+Please visit www.ugst.umd.edu/courserelatedpolicies.html for the Office of Undergraduate Studies’ full list of 
+campus-wide policies (regarding academic integrity, student privacy, non-discrimination, accessibility, etc.) and 
+follow up with me if you have any questions. 
+ 
+Course Policies 
+• Monitor ELMS announcements regularly; adjust settings as needed to ensure receipt of all notifications. 
+• Follow course calendar activities: 
+o Watch the week’s assigned videos, keep up with readings, and execute examples before the lecture. 
+o Complete project, homework, and lab assignments as assigned. 
+o Complete lab assignments during discussion session (or soon after) and submit via ELMS. 
+o Submit all individual and team project assignments via ELMS on time. Some assignments cannot be 
+submitted late, and others have late penalties. 
+• Discussion attendance is required to receive credit for the weekly...
+--- Chunk 3 ---
+• Follow course calendar activities: 
+o Watch the week’s assigned videos, keep up with readings, and execute examples before the lecture. 
+o Complete project, homework, and lab assignments as assigned. 
+o Complete lab assignments during discussion session (or soon after) and submit via ELMS. 
+o Submit all individual and team project assignments via ELMS on time. Some assignments cannot be 
+submitted late, and others have late penalties. 
+• Discussion attendance is required to receive credit for the weekly lab assignments. 
+• The office hours schedule will be posted on the course homepage in ELMS. If you are struggling with course 
+content, please reach out to the instructional team via Discord or visit office hours. 
+• All team members are expected to actively participate in the team project. At the end of the course, students 
+will complete a survey detailing their contributions. A lack of meaningful contribution may result in a grade of 
+zero for the project. 
+• Homework assignments must be your own work. Obtaining answers from online answer providers, AI tools, 
+or any individual other than the instructional team is a violation of course policy and may result in a referral to 
+the Office of Student Conduct. 
+• If you would like to request an excused absence or an assignment due date extension due to a university-
+sanctioned reason, please fill out the Accommodation Request Form (available in course homepage). If you 
+don’t hear back from us within two business days, please send a follow-up message via Canvas. 
+• If you qualify for ADS accommodations, please notify the instructor as soon as possible. 
+ 
+Course Structure 
+The course is delivered in a hybrid learning format structured around weekly modules. As such, there are 
+asynchronous elements and synchronous classes. 
+Self-study Preparation (Asynchronous Materials): This is a combination of readings, slides, and coding 
+examples. Students are expected to complete the assigned readings and coding examples prior to the relevant 
+lecture class. 
+ 
+Lecture and Discussion Classes (Synchronous Sessions): Lectures and labs will be interactive and based on the 
+material covered in the Self-Study Preparation. Participation is necessary to excel at this course. If you anticipate 
+missing a session, please submit the accommodation request form ahead of time, or soon after missing the class.
+
+Page 4 of 8 
+ 
+Course Activities and Assessments 
+This course involves formative and summative assessment components, as well as an applied team project, which 
+serves as the Scholarship in Practice component for the course. Many of the activities and assessments are 
+designed to support the semester-long Team Database Design project. Activities gauge your understanding and 
+expertise of the SQL skill set and readiness to perform the related project work. 
+Quizzes: Quizzes will assess your understanding of the concepts and skills covered in the preceding module. 
+They are to be completed individually and will be available online in ELMS, with a 60-minute time limit. 
+Labs: Lab assignments provide practice of the skills necessary for a comprehensive understanding of SQL and 
+the successful completion of the team project. You will receive these practice problems on Monday and 
+Wednesday morning, and you must complete them during class with the TA’s assistance as needed. You will 
+submit your work individually via ELMS. Discussion attendance is required to receive credit for the lab 
+assignment. 
+Homework Assignments: There will be several homework assignments, each of which will include multiple 
+questions. The questions will be practical tasks, such as writing SQL queries, constructing a view, normalizing a 
+table, or developing a stored procedure. The assignments are individual work. Although you may consult with 
+your classmates, TAs, and the instructor to develop general approaches to solving questions, you must work 
+individually while you build, type, test, and debug your answers. You are not allowed to share SQL, Excel, or 
+diagram files with classmates while completing homework assignments. 
+Team Project: Students will work in 3 person groups to design and build a non-trivial relational database. As a 
+Scholarship in Practice course, project-related work is central to this course. The project will involve defining the 
+team structure and responsibilities for individual team members, identifying an information need for a relational 
+database, determining the requirements for the database, developing a deadline-oriented plan and schedule for 
+building the database, designing the logical specifications, building, and populating the database, and developing 
+queries/views that will showcase the capabilities of the database for fulfilling the identified user needs. Students 
+will form their teams in week 1 or be assigned to a team by the instructor. Teams will choose their own topic. 
+Central to this project will be team management and team interaction. Project deliverables...
+--- Chunk 4 ---
+, and developing 
+queries/views that will showcase the capabilities of the database for fulfilling the identified user needs. Students 
+will form their teams in week 1 or be assigned to a team by the instructor. Teams will choose their own topic. 
+Central to this project will be team management and team interaction. Project deliverables throughout the 
+semester will include assessment of team function as well as the software development process. The TAs will act 
+as team mentors throughout the life cycle of the project. Project teams will provide periodic updates about their 
+progress on the project. Details will be made available during the semester. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Page 5 of 8 
+ 
+Grades 
+Grades will be posted on ELMS. If you would like to discuss your grade or have questions about how something was 
+scored, please contact the instructional team. Grade disputes must be submitted in writing within one week of 
+receiving the grade. 
+Late submissions won’t be accepted. If you need an extension, please submit the Accommodation Form 
+ahead of the deadline. Requests sent after the due date are less likely to be approved. 
+The table below illustrates the percentage weight of each assessment towards your final grade 
+ 
+ 
+Component 
+Percentage 
+Quizzes 
+10% 
+Labs (required attendance) 
+20% 
+Homework Assignments 
+40% 
+Team Project 
+30% 
+        Project Proposal                    
+        Project Standups (required attendance) 
+        Progress Report 
+        Final Project Report     
+         5% 
+         5% 
+         5% 
+         15% 
+ 
+Letter grades will be assigned using the following scale. 
+ 
+ 
+ 
+ 
+ 
+ 
+Grading Scale 
+A+ 
+> 97% 
+B+ > 87.00% 
+C+ > 77.00% 
+D+ > 67.00% 
+F 
+<60.0% 
+A 
+> 93.00% 
+B > 83.00% 
+C 
+> 73.00% 
+D > 63.00% 
+ 
+A- > 90.00% 
+B- > 80.00% 
+C- 
+> 70.00% 
+D- > 60.00% 
+ 
+
+ 
+Tentative Course Schedule 
+This schedule is for planning purposes and may change. See ELMS for current information. 
+ 
+Week Date 
+Topics 
+Concepts 
+Assignments Unlock 
+1 
+Monday 
+June 2, 2025 
+Course Introduction 
+Simple SELECT 
+Queries 
+Learning agendas 
+Logistics 
+Software installation 
+SELECT query syntax: select statement, 
+table selection, data filtering, ordering, 
+aliasing, and concatenating 
+ 
+ 
+Lab 1 
+Quiz 1 
+1 
+ 
+Wednesday 
+June 4, 2025 
+Multi-Table 
+SELECT Queries 
+Workbench Navigation 
+JOINs: inner, left, right, outer 
+UNION 
+ 
+ 
+Lab 2 
+Quiz 2 
+Homework 1 (SELECT queries, JOINs, UNION) 
+2 
+Monday 
+June 9, 2025 
+Database Design 
+Part One 
+ 
+Entities & attributes 
+Entity relationships 
+ 
+Lab 3 
+Quiz 3 
+Project Proposal 
+ 
+2 
+Wednesday 
+June 11, 2025 
+Database Design 
+Part Two 
+Three Normal Forms 
+1NF, 2NF, 3NF 
+ 
+Lab 4 
+Homework 2 (Database Design) 
+3 
+Monday 
+June 16, 2025 
+Data Preparation in 
+Excel 
+Excel tips and shortcuts 
+Delimiters, duplicates, blank rows 
+XLOOKUP 
+ 
+Lab 5 
+Progress Report 
+
+ 
+3 
+ 
+Wednesday 
+June 18, 2025 
+Database 
+Development 
+Entity-Relationship Diagram (ERD) 
+Forward engineering 
+Data import 
+Database export 
+ 
+Lab 6 
+Homework 3 (Database Development) 
+Project Standup 1 
+4 
+Monday 
+June 23, 2025 
+Aggregate Functions 
+AVG, MAX, MIN, COUNT, SUM 
+GROUP BY 
+HAVING vs WHERE 
+IF statement 
+CASE expression 
+ 
+Lab 7 
+Quiz 4 
+ 
+4 
+Wednesday 
+June 25, 2025 
+Complex Queries 
+Subqueries 
+Common Table Expressions (CTE) 
+Ranking functions 
+ 
+Lab 8 
+Quiz 5 
+Homework 4 (Complex Queries) 
+Project Standup 2 
+ 
+5 
+Monday 
+June 30, 2025 
+Stored Programs 
+Views 
+Procedures 
+Functions 
+Triggers 
+ 
+Lab 9 
+Quiz 6 
+Final Project 
+5 
+Wednesday 
+July 2, 2025 
+More SQL 
+Functions 
+Trim, case, round, truncate, date format 
+ 
+Lab 10 
+Quiz 7 
+ 
+
+ 
+6 
+Monday 
+July 7, 2025 
+CRUD 
+Create, alter, drop table 
+Create a copy of a table 
+Create,...
+--- Chunk 5 ---
+ 30, 2025 
+Stored Programs 
+Views 
+Procedures 
+Functions 
+Triggers 
+ 
+Lab 9 
+Quiz 6 
+Final Project 
+5 
+Wednesday 
+July 2, 2025 
+More SQL 
+Functions 
+Trim, case, round, truncate, date format 
+ 
+Lab 10 
+Quiz 7 
+ 
+
+ 
+6 
+Monday 
+July 7, 2025 
+CRUD 
+Create, alter, drop table 
+Create a copy of a table 
+Create, alter, drop database 
+Insert, update, delete rows 
+ 
+Lab 11 
+6 
+Wednesday 
+July 9, 2025 
+SQL Interview Prep 
+Practice interview questions from 
+Amazon, Uber, Robinhood, Capital One 
+ 
+Lab 12 (Extra Credit) 
+Project Standup 3 
+ 
+  
+ 
+ 
+Super Bowl 
+ 
+ 
+ 
+ 
+ Maryland native plants 
+ 
+ 
+ 
+ 
+ 
+Emmy Awards 2024  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Paris 2024 Olympics 
+ 
+ 
+Pokémon 
+Greatest albums of all time (according to Rolling Stone 
+magazine) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   Horror movies 
+ 
+ 
+ 
+  
+ 
+Cancelled Netflix Series 
+   
+...

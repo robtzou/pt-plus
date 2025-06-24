@@ -38,6 +38,10 @@ def process_syllabus(file_path, model="gpt-4", chunk_size=1000):
 
 # Example usage
 if __name__ == "__main__":
-    chunks = process_syllabus("INST327 Summer 2025 Syllabus.pdf")  # or .docx
-    for i, chunk in enumerate(chunks):
-        print(f"\n--- Chunk {i+1} ---\n{chunk[:5000]}...")  # Truncated for display
+
+    syll = input("Paste fileID as shown in directory.")
+    chunks = process_syllabus(f"{syll}")
+    
+    with open(f"token_output_{syll}.txt", "w", encoding="utf-8") as f:
+        for i, chunk in enumerate(chunks, 1 ):
+            f.write(f"\n--- Chunk {i+1} ---\n{chunk[:5000]}...")
