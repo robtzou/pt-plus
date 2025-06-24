@@ -1,3 +1,4 @@
+# tokenizer.py
 import os
 import fitz  # PyMuPDF for PDFs
 from docx import Document  # For DOCX files
@@ -33,15 +34,12 @@ def process_syllabus(file_path, model="gpt-4", chunk_size=1000):
 
     tokens, encoder = tokenize_text(raw_text, model)
     token_chunks = chunk_tokens(tokens, chunk_size)
-
     return [encoder.decode(chunk) for chunk in token_chunks]
 
-# Example usage
 if __name__ == "__main__":
-
-    syll = input("Paste fileID as shown in directory.")
+    syll = input("Paste fileID as shown in directory: ")
     chunks = process_syllabus(f"{syll}")
     
     with open(f"token_output_{syll}.txt", "w", encoding="utf-8") as f:
-        for i, chunk in enumerate(chunks, 1 ):
-            f.write(f"\n--- Chunk {i+1} ---\n{chunk[:5000]}...")
+        for i, chunk in enumerate(chunks, 1):
+            f.write(f"\n--- Chunk {i} ---\n{chunk[:5000]}...")

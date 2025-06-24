@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Syllabus to CSV</title>
+  <script src="lib/pdf.min.js"></script>
+  <script src="lib/mammoth.browser.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>Upload PDF/DOCX & Summarize</h1>
+  <input type="file" id="fileInput" /><br><br>
+  <textarea id="command" rows="2" cols="100" placeholder="Custom command..."></textarea><br><br>
+  <button id="submitBtn">Summarize with Groq</button><br><br>
+  <textarea id="output" rows="20" cols="100" placeholder="Output will appear here..."></textarea>
+</body>
+</html>

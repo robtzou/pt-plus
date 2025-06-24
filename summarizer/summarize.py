@@ -6,16 +6,6 @@ from groq import Groq
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-def extract_text(file_path):
-    if file_path.endswith(".pdf"):
-        doc = fitz.open(file_path)
-        return "\n".join(page.get_text() for page in doc)
-    elif file_path.endswith(".docx"):
-        doc = Document(file_path)
-        return "\n".join(p.text for p in doc.paragraphs)
-    else:
-        raise ValueError("Unsupported file type.")
-
 def tokenize_text(text, model="gpt-4"):
     enc = tiktoken.encoding_for_model(model)
     return enc.encode(text), enc
@@ -28,8 +18,7 @@ def chunk_tokens(tokens, chunk_size=1000, overlap=100):
         i += chunk_size - overlap
     return chunks
 
-def process_file(file_path, model="gpt-4", chunk_size=1000):
-    text = extract_text(file_path)
+def process_text(text, model="gpt-4", chunk_size=1000):
     tokens, encoder = tokenize_text(text, model)
     return [encoder.decode(chunk) for chunk in chunk_tokens(tokens, chunk_size)]
 
