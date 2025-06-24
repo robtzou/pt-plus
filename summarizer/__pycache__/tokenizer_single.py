@@ -2,12 +2,6 @@ import os
 import fitz  # PyMuPDF for PDFs
 from docx import Document  # For DOCX files
 import tiktoken
-from groq import Groq
-
-"""
-Currently aiming to take pdf to CSV for a calendar.
-"""
-client = Groq(api_key = os.getenv("GROQ_API_KEY"))
 
 def extract_text_from_pdf(path):
     doc = fitz.open(path)
@@ -42,23 +36,12 @@ def process_syllabus(file_path, model="gpt-4", chunk_size=1000):
 
     return [encoder.decode(chunk) for chunk in token_chunks]
 
-syll = input("Paste fileID as shown in directory.")
-chunks = process_syllabus(f"{syll}")
+# Example usage
+if __name__ == "__main__":
 
-command = "Find all deadlines and display them during the class time in CSV format for Calendar. Attach information to each deadline and assignment."
-
-completion = client.chat.completions.create(
+    syll = input("Paste fileID as shown in directory.")
+    chunks = process_syllabus(f"{syll}")
     
-    model="meta-llama/llama-4-maverick-17b-128e-instruct",
-    messages = [
-        {
-            "role": "system",
-            "content": "You are a helpful assistant that follows the user's instructions precisely and summarizes content based on the given command."
-        },
-        {
-            "role": "user",
-            "content": f"{command}\n\nContent to summarize:\n{syll}"
-        }
-    ]
-)
-print(completion.choices[0].message.content)
+    with open(f"token_output_{syll}.txt", "w", encoding="utf-8") as f:
+        for i, chunk in enumerate(chunks, 1 ):
+            f.write(f"\n--- Chunk {i+1} ---\n{chunk[:5000]}...")
