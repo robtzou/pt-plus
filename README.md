@@ -1,4 +1,6 @@
-# Planet Terp Plus 🐢
+<img width="1280" height="640" alt="Image" src="https://github.com/user-attachments/assets/64558552-8f90-4ebd-8928-92af6d214e40" />
+
+
 
 # How to use: 
 
