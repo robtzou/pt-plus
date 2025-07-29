@@ -5,7 +5,7 @@ import time # Still good to include for general API interaction patterns, though
 print("\nFetching all professors from the PlanetTerp API.")
 
 # API configuration
-base_api_url = "https://planetterp.com/api/v1/professors"
+base_api_url = "https://planetterp.com/api/v1/professors?limit=100&offset=100"
 
 # No need for pagination or semester logic for this specific API endpoint
 # The /professor endpoint returns all professors directly.
@@ -38,10 +38,10 @@ except requests.exceptions.RequestException as e:
 
 # --- Save all collected data ---
 if all_professors:
-    file_output = "all_professors_planetterp.json"
+    file_output = "planetterp.json"
 
     with open(file_output, "w", encoding='utf-8') as f:
         json.dump(all_professors, f, indent=4)
     print(f"\nAll collected professor data saved to '{file_output}'")
 else:
-    print("\nNo professor data was collected. Please check API connectivity.")
+    print("\nNo professor data was collected. Please check API connectivity.")  
