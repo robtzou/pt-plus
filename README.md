@@ -4,3 +4,5 @@
 Welcome to Testudo World! 
 
 Instead of having an entire page for each professor, let's have a single page for each course.
+
+This was going to be a legitimate project, but the PlanetTerp API is built to be garbage.
